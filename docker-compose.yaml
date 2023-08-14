@@ -7,8 +7,6 @@ services:
     container_name: ruulio
     networks:
       - efo_networks
-    ports:
-      - 8009:3000 #
   webserver_ruul:
     image: nginx:alpine
     container_name: webserver_ruul
