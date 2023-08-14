@@ -1,0 +1,8 @@
+@font-face {
+    font-family: strawford;
+    src: url('/fonts/Strawford Regular.ttf');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

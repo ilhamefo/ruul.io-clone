@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+  ruulio:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: ruulio
+    networks:
+      - efo_networks
+    ports:
+      - 8009:3000 #
+  webserver_ruul:
+    image: nginx:alpine
+    container_name: webserver_ruul
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8002:8002"
+    volumes:
+     - ./:/var/www
+     - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+     - efo_networks
+    command: [nginx-debug, '-g', 'daemon off;']
+networks:
+  efo_networks:
+    name: efo_networks
+    external: true
