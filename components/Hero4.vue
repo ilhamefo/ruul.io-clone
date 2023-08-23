@@ -1,5 +1,4 @@
 <script setup>
-
 const activeCard = ref("talent");
 
 const heroData = ref({
@@ -28,14 +27,16 @@ const heroData = ref({
           type: "content",
         },
         {
-          background: "bg-[url(/images/hero/background/641054fa62db2bd37e7182da_Group.svg)]",
+          background:
+            "bg-[url(/images/hero/background/641054fa62db2bd37e7182da_Group.svg)]",
           type: "background-only",
         },
         {
-          background: "bg-[url(/images/hero/background/640acf93ad1bc30895905d85_banking.svg)]",
+          background:
+            "bg-[url(/images/hero/background/640acf93ad1bc30895905d85_banking.svg)]",
           type: "background-only",
         },
-        
+
         {
           icon: "icon-payment-collections.svg",
           title: "Payment Collection",
@@ -51,7 +52,7 @@ const heroData = ref({
           button: "Explore Payment Collection",
           type: "content",
         },
-        
+
         {
           icon: "6409d4cfd9f112449248591b_Frame.svg",
           title: "Banking",
@@ -68,11 +69,13 @@ const heroData = ref({
           type: "content",
         },
         {
-          background: "bg-[url(/images/hero/background/642a8c47272c6ef3f5404661_Group%209.svg)]",
+          background:
+            "bg-[url(/images/hero/background/642a8c47272c6ef3f5404661_Group%209.svg)]",
           type: "background-only",
         },
         {
-          background: "bg-[url(/images/hero/background/6422b1a5a2692cd52a543461_Frame%209.svg)]",
+          background:
+            "bg-[url(/images/hero/background/6422b1a5a2692cd52a543461_Frame%209.svg)]",
           type: "background-only",
         },
         {
@@ -111,11 +114,13 @@ const heroData = ref({
           button: "Explore AOR",
         },
         {
-          background: "bg-[url(/images/hero/background/6422b0e10ddff80857912863_Frame.svg)]",
+          background:
+            "bg-[url(/images/hero/background/6422b0e10ddff80857912863_Frame.svg)]",
           type: "background-only",
         },
         {
-          background: "bg-[url(/images/hero/background/6422b16912f69642acac6967_Frame%208.svg)]",
+          background:
+            "bg-[url(/images/hero/background/6422b16912f69642acac6967_Frame%208.svg)]",
           type: "background-only",
         },
         {
@@ -149,7 +154,8 @@ const heroData = ref({
           button: "Explore Talent Management",
         },
         {
-          background: "bg-[url(/images/hero/background/6422b1a5a2692cd52a543461_Frame%209.svg)]",
+          background:
+            "bg-[url(/images/hero/background/6422b1a5a2692cd52a543461_Frame%209.svg)]",
           type: "background-only",
         },
       ],
@@ -169,7 +175,6 @@ const heroData = ref({
   ],
 });
 
-
 function toggle(id) {
   heroData.value.toggle.forEach((item) => {
     if (item.id === id) {
@@ -182,48 +187,49 @@ function toggle(id) {
 }
 </script>
 <template>
-  <div
-    class="py-[40px] px-[21.25px] md:py-[120px] lg:py-[140px] md:px-[40px] flex flex-col bg-[#FEEECA] text-[#003e39] relative border-b border-[#003e39]"
-  >
-
-    <div class="flex items-start justify-between lg:gap-x-14">
-      <div class="flex flex-col gap-5 lg:flex-grow-0 lg:gap-6 lg:mb-10">
-        <div class="font-medium">{{ heroData.title }}</div>
-        <h1
-          class="mb-5 text-5xl font-bold md:text-[80px] md:leading-[1.2] lg:text-[48px]"
-        >
-          {{ heroData.header }}
-        </h1>
-        <p class="text-[20px] font-light leading-[1.5] my-10">
-          {{ heroData.description }}
-        </p>
-
-        <div class="flex items-center justify-center">
-          <div
-            class="bg-[#F6F8FF] p-1 rounded-lg border border-[#003e39] flex items-center justify-center gap-x-1 relative w-full md:w-fit md:rounded-full md:mb-5"
+  <div class="flex items-center justify-center border-b border-[#003e39] bg-[#FEEECA]">
+    <div
+      class="py-[40px] px-[21.25px] md:py-[120px] lg:py-[140px] md:px-[40px] flex flex-col  text-[#003e39] relative   container w-full"
+    >
+      <div class="flex items-start justify-between lg:gap-x-14">
+        <div class="flex flex-col gap-5 lg:flex-grow-0 lg:gap-6 lg:mb-10">
+          <div class="font-medium">{{ heroData.title }}</div>
+          <h1
+            class="mb-5 text-5xl font-bold md:text-[80px] md:leading-[1.2] lg:text-[48px]"
           >
-            <button
-              v-for="item in heroData.toggle"
-              @click="toggle(item.id)"
-              class="flex-1 p-2.5 md:px-10 font-semibold text-center transition-colors duration-300 rounded-lg md:rounded-full whitespace-nowrap md:text-lg"
-              :class="[item.isActive ? 'bg-[#003e39] text-[#CAFDC6]' : '']"
-            >
-              {{ item.title }}
-            </button>
+            {{ heroData.header }}
+          </h1>
+          <p class="text-[20px] font-light leading-[1.5] my-10">
+            {{ heroData.description }}
+          </p>
 
-            <div class="absolute hidden -bottom-5 -right-16 md:flex">
-              <IconsArrow />
+          <div class="flex items-center justify-center">
+            <div
+              class="bg-[#F6F8FF] p-1 rounded-lg border border-[#003e39] flex items-center justify-center gap-x-1 relative w-full md:w-fit md:rounded-full md:mb-5"
+            >
+              <button
+                v-for="item in heroData.toggle"
+                @click="toggle(item.id)"
+                class="flex-1 p-2.5 md:px-10 font-semibold text-center transition-colors duration-300 rounded-lg md:rounded-full whitespace-nowrap md:text-lg"
+                :class="[item.isActive ? 'bg-[#003e39] text-[#CAFDC6]' : '']"
+              >
+                {{ item.title }}
+              </button>
+
+              <div class="absolute hidden -bottom-5 -right-16 md:flex">
+                <IconsArrow />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
-          <CardLarge
-            :data="
-              heroData.cards.find((cardData) => cardData.id === activeCard)
-                .cards
-            "
-          />
+          <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+            <CardLarge
+              :data="
+                heroData.cards.find((cardData) => cardData.id === activeCard)
+                  .cards
+              "
+            />
+          </div>
         </div>
       </div>
     </div>

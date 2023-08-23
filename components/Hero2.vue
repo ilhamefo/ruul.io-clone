@@ -53,56 +53,65 @@ const sponsors = ref([
 ]);
 </script>
 <template>
-  <div
-    class="py-[40px] px-[21.25px] md:py-[80px] lg:py-[140px] md:px-[40px] flex flex-col bg-[#F6F8FF] relative"
-  >
-    <div class="flex items-start justify-between lg:gap-x-14">
-      <div
-        class="items-start justify-start flex-grow hidden lg:flex lg:w-[900px]"
-      >
-        <NuxtImg :src="`/images/hero/${heroData.icon}`" class="" />
-      </div>
-      <div class="flex flex-col gap-5 lg:flex-grow-0 lg:gap-6 lg:mb-10">
-        <div class="font-medium">{{ heroData.title }}</div>
-        <h1 class="mb-5 text-5xl font-bold md:text-[80px] md:leading-[1.2] lg:text-[48px]">
-          {{ heroData.header }}
-        </h1>
-        <p class="text-[20px] font-light leading-[1.5] mb-5 lg:">
-          {{ heroData.description }}
-        </p>
-
+  <div class="flex items-center justify-center bg-[#F6F8FF] border-b border-[#003e39]">
+    <div
+      class="py-[40px] px-[21.25px] md:py-[80px] lg:py-[140px] md:px-[40px] flex flex-col  relative container"
+    >
+      <div class="flex items-start justify-between lg:gap-x-14">
         <div
-          class="flex flex-row items-center justify-start gap-3 mb-12 md:mb-16 lg:flex-row bg-[#feefca] rounded-md ring-1 ring-[#003e39] p-3"
+          class="items-start justify-start flex-grow hidden lg:flex lg:w-[900px]"
         >
-          <div class="flex flex-col">
-            <div
-              class="flex-grow w-6 h-6 rounded-full bg-[#003e39] flex items-center justify-center"
-            >
-              <IconsBulp class="fill-[#feefca]" />
-            </div>
-          </div>
-          <div class="flex-grow-0">
-            Agency of Record (AOR) service enables off-payroll talents and
-            organizations to work together in a streamlined and compliant
-            manner, simplifying cross-border work relations for both parties.
-          </div>
+          <NuxtImg :src="`/images/hero/${heroData.icon}`" class="" />
         </div>
+        <div class="flex flex-col gap-5 lg:flex-grow-0 lg:gap-6 lg:mb-10">
+          <div class="font-medium">{{ heroData.title }}</div>
+          <h1
+            class="mb-5 text-5xl font-bold md:text-[80px] md:leading-[1.2] lg:text-[48px]"
+          >
+            {{ heroData.header }}
+          </h1>
+          <p class="text-[20px] font-light leading-[1.5] mb-5 lg:">
+            {{ heroData.description }}
+          </p>
 
-        <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
           <div
-            class="flex items-start justify-start gap-5"
-            v-for="item in heroData.keys"
+            class="flex flex-row items-center justify-start gap-3 mb-12 md:mb-16 lg:flex-row bg-[#feefca] rounded-md ring-1 ring-[#003e39] p-3"
           >
             <div class="flex flex-col">
               <div
-                class="bg-[#F6F8FF] rounded-full ring-1 ring-[#003e39] shadow-[4px_4px_0px_0px_rgb(0,62,57)] w-[48px] h-[48px] flex flex-col items-center justify-center"
+                class="flex-grow w-6 h-6 rounded-full bg-[#003e39] flex items-center justify-center"
               >
-                <NuxtImg :src="`/images/hero/${item.icon}`" class="w-[24px]" />
+                <IconsBulp class="fill-[#feefca]" />
               </div>
             </div>
-            <div class="flex flex-col items-start justify-start flex-grow-0">
-              <div class="text-[22px] font-semibold line-clamp-1">{{ item.title }}</div>
-              <div class="text-[20px]">{{ item.description }}</div>
+            <div class="flex-grow-0">
+              Agency of Record (AOR) service enables off-payroll talents and
+              organizations to work together in a streamlined and compliant
+              manner, simplifying cross-border work relations for both parties.
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+            <div
+              class="flex items-start justify-start gap-5"
+              v-for="item in heroData.keys"
+            >
+              <div class="flex flex-col">
+                <div
+                  class="bg-[#F6F8FF] rounded-full ring-1 ring-[#003e39] shadow-[4px_4px_0px_0px_rgb(0,62,57)] w-[48px] h-[48px] flex flex-col items-center justify-center"
+                >
+                  <NuxtImg
+                    :src="`/images/hero/${item.icon}`"
+                    class="w-[24px]"
+                  />
+                </div>
+              </div>
+              <div class="flex flex-col items-start justify-start flex-grow-0">
+                <div class="text-[22px] font-semibold line-clamp-1">
+                  {{ item.title }}
+                </div>
+                <div class="text-[20px]">{{ item.description }}</div>
+              </div>
             </div>
           </div>
         </div>

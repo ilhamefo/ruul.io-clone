@@ -3,7 +3,7 @@
   <div
     class="bg-[#C9FEC6] min-h-screen font-strawford text-[#003e39] flex flex-col items-center z-auto"
   >
-    <div class="container">
+    <div class="w-full ">
       <Navbar />
 
       <Hero />
@@ -15,6 +15,8 @@
       <Hero4 />
       
       <Hero5 />
+
+      <Footer />
     </div>
   </div>
 </template>

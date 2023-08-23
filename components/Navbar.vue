@@ -9,8 +9,10 @@ function toggleMenu() {
 }
 </script>
 <template>
+  <div class="z-30 flex items-center justify-center border-b border-[#003e39] relative">
+
   <nav
-    class="flex items-center justify-between px-5 md:px-10 py-7 border-b border-[#003e39] relative z-30 bg-[#C9FEC6] w-full"
+    class="flex items-center justify-between px-5 md:px-10 py-7   bg-[#C9FEC6] w-full container"
   >
     <NuxtImg src="/images/ruul_logo.svg" format="webp" class="" />
     <button
@@ -31,4 +33,6 @@ function toggleMenu() {
   >
     <Menu v-if="showMenu" class="z-20 flex lg:hidden" />
   </Transition>
+</div>
+
 </template>
