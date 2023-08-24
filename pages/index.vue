@@ -1,9 +1,9 @@
 <template>
-  <!-- container -->
+  <!-- container-custom -->
   <div
-    class="bg-[#C9FEC6] min-h-screen font-strawford text-[#003e39] flex flex-col items-center z-auto"
+    class="bg-[#C9FEC6] min-h-screen font-strawford text-[#003e39] flex flex-col items-center z-auto antialiased "
   >
-    <div class="w-full ">
+    <div class="relative w-full">
       <Navbar />
 
       <Hero />
@@ -13,10 +13,12 @@
       <Hero3 />
 
       <Hero4 />
-      
+
       <Hero5 />
 
       <Footer />
+
+      <LazyCookies v-if="false" />
     </div>
   </div>
 </template>

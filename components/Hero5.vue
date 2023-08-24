@@ -11,7 +11,7 @@ const heroData = ref({
 <template>
   <div class="flex items-center justify-center border-b border-[#003e39] bg-[#F6F8FF]">
     <div
-      class="py-[40px] px-[21.25px] md:py-[120px] lg:py-[140px] md:px-[40px] flex flex-col text-[#003e39] relative container"
+      class="py-[40px] px-[21.25px] md:py-[120px] lg:py-[140px] md:px-[40px] flex flex-col text-[#003e39] relative container-custom"
     >
       <div class="flex items-start justify-between lg:gap-x-14">
         <div class="flex flex-col w-full gap-3 lg:flex-row lg:mb-10">

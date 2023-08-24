@@ -55,7 +55,7 @@ const sponsors = ref([
 <template>
   <div class="flex items-center justify-center bg-[#F6F8FF] border-b border-[#003e39]">
     <div
-      class="py-[40px] px-[21.25px] md:py-[80px] lg:py-[140px] md:px-[40px] flex flex-col  relative container"
+      class="py-[40px] px-[21.25px] md:py-[80px] lg:py-[140px] md:px-[40px] flex flex-col  relative container-custom"
     >
       <div class="flex items-start justify-between lg:gap-x-14">
         <div

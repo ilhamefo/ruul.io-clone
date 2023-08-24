@@ -12,7 +12,7 @@ function toggleMenu() {
   <div class="z-30 flex items-center justify-center border-b border-[#003e39] relative">
 
   <nav
-    class="flex items-center justify-between px-5 md:px-10 py-7   bg-[#C9FEC6] w-full container"
+    class="flex items-center justify-between px-5 md:px-10 py-7   bg-[#C9FEC6] w-full container-custom z-20"
   >
     <NuxtImg src="/images/ruul_logo.svg" format="webp" class="" />
     <button
@@ -30,8 +30,9 @@ function toggleMenu() {
     enter-active-class="transition duration-300"
     leave-to-class="translate-y-[-150%] opacity-0"
     leave-active-class="transition duration-300"
+    class="z-10"
   >
-    <Menu v-if="showMenu" class="z-20 flex lg:hidden" />
+    <Menu v-if="showMenu" class="flex lg:hidden" />
   </Transition>
 </div>
 

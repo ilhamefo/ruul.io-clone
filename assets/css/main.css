@@ -3,6 +3,36 @@
     src: url('/fonts/Strawford Regular.ttf');
 }
 
+@font-face {
+    font-family: roboto;
+    src: url('/fonts/Roboto-Regular.ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.container-custom {
+    width: 100%;
+}
+@media (min-width: 640px) {
+    .container-custom {
+        max-width: 640px;
+    }
+}
+@media (min-width: 768px) {
+    .container-custom {
+        max-width: 768px;
+    }
+}
+@media (min-width: 1024px) {
+    .container-custom {
+        max-width: 1024px;
+    }
+}
+@media (min-width: 1320px) {
+    .container-custom {
+        max-width: 1320px;
+    }
+}

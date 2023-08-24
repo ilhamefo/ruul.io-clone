@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         strawford: ["strawford", "sans-serif"],
+        roboto: ["roboto", "sans-serif"],
       },
     },
   },

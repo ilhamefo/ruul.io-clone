@@ -29,7 +29,7 @@ const sponsors = ref([
 <template>
   <div class="flex items-center justify-center border-b border-[#003e39] ">
     <div
-      class="py-[40px] px-[21.25px] md:py-[80px] md:px-[40px] flex flex-col bg-transparent container relative z-10"
+      class="py-[40px] px-[21.25px] md:py-[80px] md:px-[40px] flex flex-col bg-transparent container-custom relative z-10"
     >
       <div class="flex items-start justify-between">
         <div class="flex flex-col gap-5 lg:flex-grow-0 lg:gap-16 lg:mb-10">
@@ -53,7 +53,7 @@ const sponsors = ref([
       </div>
 
       <div
-        class="grid w-full grid-cols-2 gap-4 md:-bottom-[48px] md:grid-cols-4 md:absolute md:left-0 md:px-[40px]"
+        class="grid w-full grid-cols-2 gap-4 md:-bottom-[48px] md:grid-cols-4 md:absolute md:left-0 md:px-[40px] bg-red-300"
       >
         <div
           class="bg-[#F6F8FF] flex items-center justify-center lg:w-[200px] h-[100px] lg:h-[115px] shadow-[7px_7px_0px_0px_rgb(0,62,57)] ring-1 ring-[#003e39] rounded-md hover:shadow-[0px_0px_0px_0px_rgba(0,62,57,0)] transition-all hover:ring-0 duration-300 p-[24px]"
