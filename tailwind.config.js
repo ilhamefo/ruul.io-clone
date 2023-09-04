@@ -10,6 +10,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'reverse-spin': 'reverse-spin 1s linear infinite'
+      },
+      keyframes: {
+        'reverse-spin': {
+          from: {
+            transform: 'rotate(360deg)'
+          },
+        }
+      },
       fontFamily: {
         strawford: ["strawford", "sans-serif"],
         roboto: ["roboto", "sans-serif"],
